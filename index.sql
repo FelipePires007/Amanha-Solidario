@@ -10,7 +10,7 @@ create table endereco(
     lati decimal(10,8),
     longi decimal(11,8)
 );
-CREATE TABLE doacao (
+create table doacao (
   id_doacao INT PRIMARY KEY NOT NULL,
   quantidade INT NOT NULL,
   tipo CHAR NOT NULL,
@@ -25,8 +25,9 @@ insert into endereco (cep, rua, municipio, bairro, lati, longi)
 		   (98765432, 'Rua Oscar Freire', 'São Paulo', 'Jardins', -23.566501, -46.667672),
            (65432198, 'Avenida Paulista', 'São Paulo', 'Bela Vista', -23.561268, -46.655503);
 
-INSERT INTO doacao (id_doacao, quantidade, tipo, data_recebimento)
-VALUES
+
+insert into doacao (id_doacao, quantidade, tipo, data_recebimento)
+values
            (1, 10, 'Alimento', '26-05-2024'),
            (2, 5, 'Roupa', '16-05-2024'),
            (3, 20, 'Alimento', '01-05-2024'),
