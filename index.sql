@@ -13,7 +13,7 @@ create table endereco(
 CREATE TABLE doacao (
   id_doacao INT PRIMARY KEY NOT NULL,
   quantidade INT NOT NULL,
-  tipo CHAR(1) NOT NULL,
+  tipo CHAR NOT NULL,
   data_recebimento date NOT NULL
 );
 
