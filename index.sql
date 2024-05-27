@@ -10,6 +10,13 @@ create table endereco(
     lati decimal(10,8),
     longi decimal(11,8)
 );
+CREATE TABLE doacao (
+  id_doacao INT PRIMARY KEY NOT NULL,
+  quantidade INT NOT NULL,
+  tipo CHAR(1) NOT NULL,
+  data_recebimento date NOT NULL
+);
+
 
 insert into endereco (cep, rua, municipio, bairro, lati, longi)
 	values (12345678, 'Rua das Flores', 'São Paulo', 'Centro', -23.55052, -46.633308),
