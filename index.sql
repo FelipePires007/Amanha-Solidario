@@ -10,11 +10,23 @@ create table endereco(
     lati decimal(10,8),
     longi decimal(11,8)
 );
+
 create table doacao (
   id_doacao INT PRIMARY KEY NOT NULL,
   quantidade INT NOT NULL,
-  tipo CHAR NOT NULL,
+  tipo CHAR(25) NOT NULL,
   data_recebimento date NOT NULL
+);
+
+CREATE TABLE ong (
+  id_ong INT PRIMARY KEY NOT NULL,
+  cep INT,
+  projeto VARCHAR(255),
+  id_doacao INT,
+  nome VARCHAR(255),
+  gestor VARCHAR(255),
+  FOREIGN KEY (cep) REFERENCES endereco(cep),
+  FOREIGN KEY (id_doacao) REFERENCES doacao(id_doacao)
 );
 
 
@@ -25,15 +37,25 @@ insert into endereco (cep, rua, municipio, bairro, lati, longi)
 		   (98765432, 'Rua Oscar Freire', 'São Paulo', 'Jardins', -23.566501, -46.667672),
            (65432198, 'Avenida Paulista', 'São Paulo', 'Bela Vista', -23.561268, -46.655503);
 
+INSERT INTO doacao (id_doacao, quantidade, tipo, data_recebimento)
+VALUES
+    (1, 10, 'Alimento', '2024-05-26'),
+    (2, 5, 'Roupa', '2024-05-16'),
+    (3, 20, 'Alimento', '2024-05-01'),
+    (4, 15, 'Alimento', '2024-04-24'),
+    (5, 8, 'Roupa', '2024-04-11');
 
-insert into doacao (id_doacao, quantidade, tipo, data_recebimento)
+insert into  ong (id_ong, cep, projeto, id_doacao, nome, gestor)
 values
-           (1, 10, 'Alimento', '26-05-2024'),
-           (2, 5, 'Roupa', '16-05-2024'),
-           (3, 20, 'Alimento', '01-05-2024'),
-           (4, 15, 'Alimento', '24-04-2024'),
-           (5, 8, 'Roupa', '11-04-2024');
+  (1, 12345678, 'Projeto Alimentar', 1, 'ONG Alegria', 'João Silva'),
+  (2, 87654321, 'Projeto Vestir', 2, 'ONG Esperança', 'Maria Souza'),
+  (3, 45678912, 'Projeto Nutrir', 3, 'ONG Solidariedade', 'Carlos Pereira'),
+  (4, 98765432, 'Projeto Educação', 4, 'ONG Futuro', 'Ana Lima'),
+  (5, 65432198, 'Projeto Incluir', 5, 'ONG Inclusão', 'Paulo Santos');
 
 
 SELECT * FROM endereco;
+
 SELECT * FROM doacao;
+
+SELECT * FROM ong
