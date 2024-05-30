@@ -38,6 +38,17 @@ CREATE TABLE abrigo (
 
 );
 
+
+CREATE TABLE vitima (
+  id_vitima INT AUTO_INCREMENT PRIMARY KEY,
+  cpf BIGINT,
+  nome VARCHAR(255) NOT NULL,
+  genero VARCHAR(255) NOT NULL,
+  idade INT,
+  id_abrigo INTEGER,
+  FOREIGN KEY (id_abrigo) REFERENCES abrigo(id_abrigo)
+);
+
 insert into endereco (cep, rua, municipio, bairro, lati, longi)
 	values (12345678, 'Rua das Flores', 'São Paulo', 'Centro', -23.55052, -46.633308),
 		   (87654321, 'Avenida Brasil', 'Rio de Janeiro', 'Copacabana', -22.971089, -43.185997),
