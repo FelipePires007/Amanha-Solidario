@@ -94,4 +94,8 @@ SELECT * FROM endereco;
 
 SELECT * FROM doacao;
 
-SELECT * FROM ong
+SELECT * FROM ong;
+
+SELECT * FROM abrigo;
+
+SELECT * FROM vitima
