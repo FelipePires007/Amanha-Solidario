@@ -82,6 +82,13 @@ values
     (5, 'Abrigo Amanhã Melhor', '81726354', 50, 'Gabriel Santos');
 
 
+insert into vitima(cpf, nome, genero, idade, id_abrigo)
+values
+    (12345678901, 'Maria Souza', 'Feminino', 25, 1),
+    (98765432109, 'Joaquim Ferreira', 'Masculino', 30, 1),
+    (45678901234, 'Ana Souza', 'Feminino', 28, 2),
+    (78901234567, 'Carlos Almeida', 'Masculino', 35, 3),
+    (23456789012, 'Carla Costa', 'Feminino', 22, 1);
 
 SELECT * FROM endereco;
 
