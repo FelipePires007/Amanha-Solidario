@@ -14,7 +14,7 @@ create table endereco(
 create table doacao (
   id_doacao INT PRIMARY KEY NOT NULL,
   quantidade INT NOT NULL,
-  tipo CHAR(25) NOT NULL,
+  tipo VARCHAR(25) NOT NULL,
   data_recebimento date NOT NULL
 );
 
@@ -29,6 +29,14 @@ CREATE TABLE ong (
   FOREIGN KEY (id_doacao) REFERENCES doacao(id_doacao)
 );
 
+CREATE TABLE abrigo (
+  id_abrigo INTEGER PRIMARY KEY,
+  nome VARCHAR(255) NOT NULL,
+  cep CHAR(8),
+  capacidade INTEGER NOT NULL,
+  gestor VARCHAR(255) NOT NULL
+
+);
 
 insert into endereco (cep, rua, municipio, bairro, lati, longi)
 	values (12345678, 'Rua das Flores', 'São Paulo', 'Centro', -23.55052, -46.633308),
