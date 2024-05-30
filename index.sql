@@ -49,6 +49,13 @@ CREATE TABLE vitima (
   FOREIGN KEY (id_abrigo) REFERENCES abrigo(id_abrigo)
 );
 
+CREATE TABLE voluntarios(
+  id_voluntarios INT AUTO_INCREMENT PRIMARY KEY,
+  numero_voluntarios INT,
+  funcao VARCHAR(200),
+  cpf CHAR(11)
+);
+
 insert into endereco (cep, rua, municipio, bairro, lati, longi)
 	values (12345678, 'Rua das Flores', 'São Paulo', 'Centro', -23.55052, -46.633308),
 		   (87654321, 'Avenida Brasil', 'Rio de Janeiro', 'Copacabana', -22.971089, -43.185997),
@@ -89,6 +96,8 @@ values
     (45678901234, 'Ana Souza', 'Feminino', 28, 2),
     (78901234567, 'Carlos Almeida', 'Masculino', 35, 3),
     (23456789012, 'Carla Costa', 'Feminino', 22, 1);
+
+    
 
 SELECT * FROM endereco;
 
