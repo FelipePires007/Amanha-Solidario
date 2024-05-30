@@ -116,3 +116,8 @@ SELECT * FROM abrigo;
 SELECT * FROM vitima
 
 SELECT * FROM voluntarios
+
+SELECT tipo, SUM(quantidade) AS total_quantidade
+FROM doacao
+GROUP BY tipo;
+
