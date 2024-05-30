@@ -97,7 +97,13 @@ values
     (78901234567, 'Carlos Almeida', 'Masculino', 35, 3),
     (23456789012, 'Carla Costa', 'Feminino', 22, 1);
 
-    
+    insert into voluntarios(numero_voluntarios, funcao, cpf)
+    values 
+    (1, 'secretaria da saude', 12345608921),
+    (2, 'correios', 12345670891),
+    (3, 'corpo de bombeiros', 1234506783),
+    (4, 'resgate de animais', 1234056781),
+    (5, 'distribuir comida', 12304567821);
 
 SELECT * FROM endereco;
 
