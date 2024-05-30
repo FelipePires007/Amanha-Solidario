@@ -114,3 +114,5 @@ SELECT * FROM ong;
 SELECT * FROM abrigo;
 
 SELECT * FROM vitima
+
+SELECT * FROM voluntarios
