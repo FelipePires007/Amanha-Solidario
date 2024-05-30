@@ -73,6 +73,16 @@ values
   (5, 65432198, 'Projeto Incluir', 5, 'ONG Inclusão', 'Paulo Santos');
 
 
+insert into abrigo (id_abrigo, nome, cep, capacidade, gestor)
+values
+    (1, 'Abrigo Soledade', '12344321', 50, 'Gil Maik'),
+    (2, 'Abrigo Bosque da Paz', '43211234', 70, 'Andrey Justino'),
+    (3, 'Abrigo Viladouro', '87654321', 75, 'Kaique Alexandre'),
+    (4, 'Abrigo Bom Viver', '12345678', 60, 'Felipe Pires'),
+    (5, 'Abrigo Amanhã Melhor', '81726354', 50, 'Gabriel Santos');
+
+
+
 SELECT * FROM endereco;
 
 SELECT * FROM doacao;
