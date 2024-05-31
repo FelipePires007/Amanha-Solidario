@@ -121,3 +121,6 @@ SELECT tipo, SUM(quantidade) AS total_quantidade
 FROM doacao
 GROUP BY tipo;
 
+SELECT genero, COUNT(id_vitima) AS quantidade_vitimas
+FROM vitima
+GROUP BY genero;
