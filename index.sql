@@ -56,7 +56,7 @@ CREATE TABLE voluntarios(
   cpf CHAR(11)
 );
 
-insert into endereco (cep, rua, municipio, bairro, lati, longi)
+INSERT INTO endereco (cep, rua, municipio, bairro, lati, longi)
 	values (12345678, 'Rua das Flores', 'São Paulo', 'Centro', -23.55052, -46.633308),
 		   (87654321, 'Avenida Brasil', 'Rio de Janeiro', 'Copacabana', -22.971089, -43.185997),
 		   (45678912, 'Rua 25 de Março', 'São Paulo', 'Brás', -23.541183, -46.629035),
@@ -71,7 +71,7 @@ VALUES
     (4, 15, 'Alimento', '2024-04-24'),
     (5, 8, 'Roupa', '2024-04-11');
 
-insert into  ong (id_ong, cep, projeto, id_doacao, nome, gestor)
+INSERT INTO  ong (id_ong, cep, projeto, id_doacao, nome, gestor)
 values
   (1, 12345678, 'Projeto Alimentar', 1, 'ONG Alegria', 'João Silva'),
   (2, 87654321, 'Projeto Vestir', 2, 'ONG Esperança', 'Maria Souza'),
@@ -80,7 +80,7 @@ values
   (5, 65432198, 'Projeto Incluir', 5, 'ONG Inclusão', 'Paulo Santos');
 
 
-insert into abrigo (id_abrigo, nome, cep, capacidade, gestor)
+INSERT INTO abrigo (id_abrigo, nome, cep, capacidade, gestor)
 values
     (1, 'Abrigo Soledade', '12344321', 50, 'Gil Maik'),
     (2, 'Abrigo Bosque da Paz', '43211234', 70, 'Andrey Justino'),
@@ -89,7 +89,7 @@ values
     (5, 'Abrigo Amanhã Melhor', '81726354', 50, 'Gabriel Santos');
 
 
-insert into vitima(cpf, nome, genero, idade, id_abrigo)
+INSERT INTO vitima(cpf, nome, genero, idade, id_abrigo)
 values
     (12345678901, 'Maria Souza', 'Feminino', 25, 1),
     (98765432109, 'Joaquim Ferreira', 'Masculino', 30, 1),
@@ -97,7 +97,7 @@ values
     (78901234567, 'Carlos Almeida', 'Masculino', 35, 3),
     (23456789012, 'Carla Costa', 'Feminino', 22, 1);
 
-    insert into voluntarios(numero_voluntarios, funcao, cpf)
+INSERT INTO voluntarios(numero_voluntarios, funcao, cpf)
     values 
     (1, 'secretaria da saude', 12345608921),
     (2, 'correios', 12345670891),
