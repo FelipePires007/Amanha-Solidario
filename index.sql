@@ -2,7 +2,7 @@ CREATE DATABASE amanhaSolidario;
 
 use amanhaSolidario;
 
-create table endereco(
+CREATE TABLE endereco(
 	cep int primary key not null,
     rua varchar(255),
     municipio varchar(255),
@@ -11,7 +11,7 @@ create table endereco(
     longi decimal(11,8)
 );
 
-create table doacao (
+CREATE TABLE doacao (
   id_doacao INT PRIMARY KEY NOT NULL,
   quantidade INT NOT NULL,
   tipo VARCHAR(25) NOT NULL,
