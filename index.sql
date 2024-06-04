@@ -113,9 +113,9 @@ SELECT * FROM ong;
 
 SELECT * FROM abrigo;
 
-SELECT * FROM vitima
+SELECT * FROM vitima;
 
-SELECT * FROM voluntarios
+SELECT * FROM voluntarios;
 
 SELECT tipo, SUM(quantidade) AS total_quantidade
 FROM doacao
@@ -124,3 +124,14 @@ GROUP BY tipo;
 SELECT genero, COUNT(id_vitima) AS quantidade_vitimas
 FROM vitima
 GROUP BY genero;
+
+SELECT 
+    abrigo.nome AS nome_abrigo,
+    COUNT(vitima.id_vitima) AS quantidade_vitimas,
+    abrigo.capacidade AS capacidade_abrigo
+FROM 
+    abrigo
+LEFT JOIN 
+    vitima ON abrigo.id_abrigo = vitima.id_abrigo
+GROUP BY 
+    abrigo.nome, abrigo.capacidade;
