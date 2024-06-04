@@ -1,25 +1,25 @@
 CREATE DATABASE amanhaSolidario;
 
-use amanhaSolidario;
+USE amanhaSolidario;
 
 CREATE TABLE endereco(
-	cep int primary key not null,
-    rua varchar(255),
-    municipio varchar(255),
-    bairro varchar(255),
-    lati decimal(10,8),
-    longi decimal(11,8)
+	cep INT PRIMARY KEY NOT NULL,
+    rua VARCHAR(255),
+    municipio VARCHAR(255),
+    bairro VARCHAR(255),
+    lati DECIMAL(10,8),
+    longi DECIMAL(11,8)
 );
 
 CREATE TABLE doacao (
-  id_doacao INT PRIMARY KEY NOT NULL,
+  id_doacao INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
   quantidade INT NOT NULL,
   tipo VARCHAR(25) NOT NULL,
   data_recebimento date NOT NULL
 );
 
 CREATE TABLE ong (
-  id_ong INT PRIMARY KEY NOT NULL,
+  id_ong INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
   cep INT,
   projeto VARCHAR(255),
   id_doacao INT,
@@ -30,7 +30,7 @@ CREATE TABLE ong (
 );
 
 CREATE TABLE abrigo (
-  id_abrigo INTEGER PRIMARY KEY,
+  id_abrigo INTEGER AUTO_INCREMENT PRIMARY KEY,
   nome VARCHAR(255) NOT NULL,
   cep CHAR(8),
   capacidade INTEGER NOT NULL,
@@ -53,7 +53,8 @@ CREATE TABLE voluntarios(
   id_voluntarios INT AUTO_INCREMENT PRIMARY KEY,
   numero_voluntarios INT,
   funcao VARCHAR(200),
-  cpf CHAR(11)
+  cpf CHAR(11),
+  id_ong int
 );
 
 INSERT INTO endereco (cep, rua, municipio, bairro, lati, longi)
