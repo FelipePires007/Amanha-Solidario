@@ -2,6 +2,8 @@ CREATE DATABASE amanhaSolidario;
 
 USE amanhaSolidario;
 
+--Criação das tabelas
+
 CREATE TABLE endereco(
     cep CHAR(8) PRIMARY KEY NOT NULL,
     rua VARCHAR(255),
@@ -59,6 +61,8 @@ CREATE TABLE voluntarios(
   FOREIGN KEY (id_ong) REFERENCES ong(id_ong)
 );
 
+-- Inserindo valores tabelas
+
 INSERT INTO endereco (cep, rua, municipio, bairro, lati, longi)
 VALUES 
     ('12345678', 'Rua das Flores', 'São Paulo', 'Centro', -23.55052, -46.633308),
@@ -107,7 +111,8 @@ VALUES
     (32, 'Resgate de Animais', '1234056781', 4),
     (25, 'Distribuir Comida', '12304567821', 5);
 
--- Select all data from the tables
+
+-- Sessão para todas as consultas das tabelas
 
 SELECT * FROM endereco;
 
@@ -120,6 +125,8 @@ SELECT * FROM abrigo;
 SELECT * FROM vitima;
 
 SELECT * FROM voluntarios;
+
+-- CRIAÇÃO DE GRAFICOS
 
 -- Gil Maik
 SELECT tipo, SUM(quantidade) AS quantidade_total
