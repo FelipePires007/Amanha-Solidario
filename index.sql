@@ -97,16 +97,21 @@ VALUES
 
 INSERT INTO vitima (cpf, nome, genero, idade, id_abrigo)
 VALUES
-    ('34567890123', 'Bruno Silva', 'Masculino', 27, 6),
-    ('65432109876', 'Camila Martins', 'Feminino', 31, 7),
-    ('56789012345', 'Felipe Oliveira', 'Masculino', 29, 8),
-    ('89012345678', 'Fernanda Lima', 'Feminino', 26, 9),
-    ('01234567890', 'Ricardo Santos', 'Masculino', 32, 10),
-    ('23456789012', 'Juliana Pereira', 'Feminino', 24, 11),
-    ('34567890123', 'Diego Fernandes', 'Masculino', 33, 12),
-    ('45678901234', 'Priscila Rodrigues', 'Feminino', 28, 13),
-    ('56789012345', 'Marcelo Gomes', 'Masculino', 30, 14),
-    ('67890123456', 'Larissa Monteiro', 'Feminino', 27, 15);
+    ('12345678901', 'Maria Souza', 'Feminino', 25, 1),
+    ('98765432109', 'Joaquim Ferreira', 'Masculino', 30, 2),
+    ('45678901234', 'Ana Souza', 'Feminino', 28, 3),
+    ('78901234567', 'Carlos Almeida', 'Masculino', 35, 4),
+    ('23456789012', 'Carla Costa', 'Feminino', 22, 5); 
+    ('34567890123', 'Bruno Silva', 'Masculino', 27, 3),
+    ('65432109876', 'Camila Martins', 'Feminino', 31, 2),
+    ('56789012345', 'Felipe Oliveira', 'Masculino', 29, 1),
+    ('89012345678', 'Fernanda Lima', 'Feminino', 26, 4),
+    ('01234567890', 'Ricardo Santos', 'Masculino', 32, 5),
+    ('23456789012', 'Juliana Pereira', 'Feminino', 24, 3),
+    ('34567890123', 'Diego Fernandes', 'Masculino', 33, 2),
+    ('45678901234', 'Priscila Rodrigues', 'Feminino', 28, 1),
+    ('56789012345', 'Marcelo Gomes', 'Masculino', 30, 4),
+    ('67890123456', 'Larissa Monteiro', 'Feminino', 27, 5);
 
 
 INSERT INTO voluntario (nome, idade, funcao, cpf, id_ong)
