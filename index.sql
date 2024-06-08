@@ -97,15 +97,21 @@ VALUES
 
 INSERT INTO vitima (cpf, nome, genero, idade, id_abrigo)
 VALUES
-    ('12345678901', 'Maria Souza', 'Feminino', 25, 1),
-    ('98765432109', 'Joaquim Ferreira', 'Masculino', 30, 2),
-    ('45678901234', 'Ana Souza', 'Feminino', 28, 3),
-    ('78901234567', 'Carlos Almeida', 'Masculino', 35, 4),
-    ('23456789012', 'Carla Costa', 'Feminino', 22, 5);
+    ('34567890123', 'Bruno Silva', 'Masculino', 27, 6),
+    ('65432109876', 'Camila Martins', 'Feminino', 31, 7),
+    ('56789012345', 'Felipe Oliveira', 'Masculino', 29, 8),
+    ('89012345678', 'Fernanda Lima', 'Feminino', 26, 9),
+    ('01234567890', 'Ricardo Santos', 'Masculino', 32, 10),
+    ('23456789012', 'Juliana Pereira', 'Feminino', 24, 11),
+    ('34567890123', 'Diego Fernandes', 'Masculino', 33, 12),
+    ('45678901234', 'Priscila Rodrigues', 'Feminino', 28, 13),
+    ('56789012345', 'Marcelo Gomes', 'Masculino', 30, 14),
+    ('67890123456', 'Larissa Monteiro', 'Feminino', 27, 15);
+
 
 INSERT INTO voluntarios (numero_voluntarios, funcao, cpf, id_ong)
 VALUES 
-    (40, 'Secretaria da Saude', '12345608921', 1),
+    (40, 'Saude', '12345608921', 1),
     (38, 'Correios', '12345670891', 2),
     (55, 'Corpo de Bombeiros', '1234506783', 3),
     (32, 'Resgate de Animais', '1234056781', 4),
