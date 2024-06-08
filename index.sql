@@ -52,9 +52,9 @@ CREATE TABLE vitima (
     FOREIGN KEY (id_abrigo) REFERENCES abrigo(id_abrigo)
 );
 
-CREATE TABLE voluntarios(
-  id_voluntarios INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
-  numero_voluntarios INT,
+CREATE TABLE voluntario(
+  id_voluntario INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+  idade INT,
   funcao VARCHAR(200),
   cpf CHAR(11),
   id_ong INT,
@@ -109,13 +109,29 @@ VALUES
     ('67890123456', 'Larissa Monteiro', 'Feminino', 27, 15);
 
 
-INSERT INTO voluntarios (numero_voluntarios, funcao, cpf, id_ong)
+INSERT INTO voluntario (nome, idade, funcao, cpf, id_ong)
 VALUES 
-    (40, 'Saude', '12345608921', 1),
-    (38, 'Correios', '12345670891', 2),
-    (55, 'Corpo de Bombeiros', '1234506783', 3),
-    (32, 'Resgate de Animais', '1234056781', 4),
-    (25, 'Distribuir Comida', '12304567821', 5);
+    ('Carlos Mendes', 40, 'Saude', '45678901234', 1),
+    ('Maria Oliveira', 38, 'Correios', '56789012345', 2),
+    ('Joaquim Silva', 55, 'Corpo de Bombeiros', '67890123456', 3),
+    ('Ana Costa', 32, 'Resgate de Animais', '78901234567', 4),
+    ('Lucas Souza', 25, 'Distribuir Comida', '89012345678', 5),
+    ('Fernanda Gomes', 28, 'Educação', '90123456789', 6),
+    ('Pedro Santos', 35, 'Construção Civil', '01234567890', 7),
+    ('Camila Lima', 30, 'Logística', '12345678901', 8),
+    ('Paulo Ferreira', 29, 'Psicologia', '23456789012', 9),
+    ('Juliana Rocha', 33, 'Saude', '34567890123', 1),
+    ('Rodrigo Almeida', 27, 'Correios', '45678901234', 2),
+    ('Aline Martins', 31, 'Corpo de Bombeiros', '56789012345', 3),
+    ('Gustavo Vieira', 26, 'Resgate de Animais', '67890123456', 4),
+    ('Beatriz Ribeiro', 24, 'Distribuir Comida', '78901234567', 5),
+    ('Thiago Barros', 36, 'Educação', '89012345678', 6),
+    ('Luiza Araújo', 28, 'Construção Civil', '90123456789', 7),
+    ('Vinícius Carvalho', 30, 'Logística', '01234567890', 8),
+    ('Mariana Fonseca', 32, 'Psicologia', '12345678901', 9),
+    ('Eduardo Mendes', 34, 'Saude', '23456789012', 1),
+    ('Tatiana Cardoso', 37, 'Correios', '34567890123', 2);
+
 
 
 -- Sessão para todas as consultas das tabelas
