@@ -101,7 +101,7 @@ VALUES
     ('98765432109', 'Joaquim Ferreira', 'Masculino', 30, 2),
     ('45678901234', 'Ana Souza', 'Feminino', 28, 3),
     ('78901234567', 'Carlos Almeida', 'Masculino', 35, 4),
-    ('23456789012', 'Carla Costa', 'Feminino', 22, 5); 
+    ('23456789012', 'Carla Costa', 'Feminino', 22, 5),
     ('34567890123', 'Bruno Silva', 'Masculino', 27, 3),
     ('65432109876', 'Camila Martins', 'Feminino', 31, 2),
     ('56789012345', 'Felipe Oliveira', 'Masculino', 29, 1),
@@ -160,7 +160,7 @@ SELECT tipo, SUM(quantidade) AS quantidade_total
 FROM doacao
 GROUP BY tipo;
 
- 
+
 SELECT
   abrigo.nome AS Nome,
   abrigo.capacidade AS Capacidade
@@ -177,3 +177,17 @@ GROUP BY abrigo.id_abrigo, abrigo.nome, abrigo.capacidade;
 SELECT genero, COUNT(id_vitima) AS quantidade_vitimas
 FROM vitima
 GROUP BY genero;
+
+SELECT
+  voluntario.nome AS Nome,
+  voluntario.idade AS Idade
+FROM voluntario
+ORDER BY voluntario.idade;
+
+SELECT
+  voluntario.nome AS Nome,
+ SUM(voluntario.idade)
+  FROM voluntario
+  LEFT JOIN voluntario ON voluntario.id_voluntario = voluntario.id_voluntario;
+
+  DROP DATABASE amanhaSolidario;
