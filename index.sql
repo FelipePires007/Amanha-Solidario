@@ -4,7 +4,7 @@ USE amanhaSolidario;
 
 --Criação das tabelas
 
-CREATE TABLE endereco(
+CREATE TABLE endereco (
     cep CHAR(8) PRIMARY KEY NOT NULL,
     rua VARCHAR(255),
     municipio VARCHAR(255),
@@ -12,7 +12,6 @@ CREATE TABLE endereco(
     lati DECIMAL(10,8),
     longi DECIMAL(11,8)
 );
-
 CREATE TABLE doacao (
   id_doacao INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
   quantidade INT NOT NULL,
@@ -54,6 +53,7 @@ CREATE TABLE vitima (
 
 CREATE TABLE voluntario(
   id_voluntario INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+  nome VARCHAR(255),
   idade INT,
   funcao VARCHAR(200),
   cpf CHAR(11),
@@ -151,7 +151,7 @@ SELECT * FROM abrigo;
 
 SELECT * FROM vitima;
 
-SELECT * FROM voluntarios;
+SELECT * FROM voluntario;
 
 -- CRIAÇÃO DE GRAFICOS
 
