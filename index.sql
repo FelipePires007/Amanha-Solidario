@@ -1,7 +1,5 @@
 CREATE DATABASE amanhaSolidario;
-
 USE amanhaSolidario;
-
 --Criação das tabelas
 
 CREATE TABLE endereco (
@@ -184,10 +182,27 @@ SELECT
 FROM voluntario
 ORDER BY voluntario.idade;
 
+-- SELECT
+--   voluntario.nome AS Nome,
+--   SUM(voluntario.idade)
+--   FROM voluntario
+--   LEFT JOIN voluntario ON voluntario.id_voluntario = voluntario.id_voluntario;
+
 SELECT
   voluntario.nome AS Nome,
- SUM(voluntario.idade)
+  voluntario.idade
   FROM voluntario
   LEFT JOIN voluntario ON voluntario.id_voluntario = voluntario.id_voluntario;
 
-  DROP DATABASE amanhaSolidario;
+
+
+SELECT 
+  voluntario.nome AS nome_voluntario, 
+  ong.nome AS nome_ong
+FROM voluntario
+JOIN ong ON voluntario.id_ong = ong.id_ong;
+
+SELECT 
+  voluntario.nome AS nome_voluntario, 
+  voluntario.idade AS idade_voluntario
+FROM voluntario;
