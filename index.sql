@@ -194,13 +194,13 @@ SELECT
   FROM voluntario
   LEFT JOIN voluntario ON voluntario.id_voluntario = voluntario.id_voluntario;
 
-
-
 SELECT 
-  voluntario.nome AS nome_voluntario, 
-  ong.nome AS nome_ong
-FROM voluntario
-JOIN ong ON voluntario.id_ong = ong.id_ong;
+  abrigo.nome AS Nome_Abrigo,
+  COUNT(voluntario.id_voluntario) AS Quantidade_Voluntarios
+FROM abrigo
+LEFT JOIN ong ON abrigo.id_ong = ong.id_ong
+LEFT JOIN voluntario ON ong.id_ong = voluntario.id_ong
+GROUP BY abrigo.nome;
 
 SELECT 
   voluntario.nome AS nome_voluntario, 
