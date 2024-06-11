@@ -208,7 +208,14 @@ FROM vitima
 GROUP BY genero;
 
 -- Andrey
-select nome, count(*) from ong GROUP BY nome;
+SELECT nome, count(*) FROM ong GROUP BY nome;
+
 SELECT projeto, COUNT(id_doacao) AS total_doacoes
 FROM ong
 GROUP BY projeto;
+
+SELECT nome, COUNT(projeto) AS num_projetos
+  FROM ong
+  GROUP BY nome
+  ORDER BY num_projetos DESC
+  LIMIT 5;
