@@ -207,6 +207,7 @@ SELECT
   voluntario.idade AS idade_voluntario
 FROM voluntario;
 
+-- Andrey
 select nome, count(*) from ong GROUP BY nome;
 SELECT projeto, COUNT(id_doacao) AS total_doacoes
 FROM ong
