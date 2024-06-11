@@ -176,15 +176,6 @@ GROUP BY abrigo.id_abrigo, abrigo.nome, abrigo.capacidade;
 
 
 
-
--- Felipe
-SELECT
-  voluntario.nome AS Nome,
-  voluntario.idade AS Idade
-FROM voluntario
-ORDER BY voluntario.idade;
-
-
 --Gabriel
 SELECT
   voluntario.nome AS Nome,
@@ -210,12 +201,31 @@ GROUP BY genero;
 -- Andrey
 SELECT nome, count(*) FROM ong GROUP BY nome;
 
+--Andrey
 SELECT projeto, COUNT(id_doacao) AS total_doacoes
 FROM ong
 GROUP BY projeto;
 
+--Andrey
 SELECT nome, COUNT(projeto) AS num_projetos
   FROM ong
   GROUP BY nome
   ORDER BY num_projetos DESC
   LIMIT 5;
+
+--Felipe
+SELECT abrigo.nome AS Nome_Abrigo, COUNT(vitima.id_vitima) AS total_vitimas
+FROM abrigo
+INNER JOIN vitima ON vitima.id_abrigo = abrigo.id_abrigo
+GROUP BY abrigo.nome;
+
+--Felipe
+SELECT vitima.idade, vitima.nome
+FROM vitima
+WHERE vitima.genero = 'Masculino';
+
+--Felipe
+SELECT vitima.idade, vitima.nome
+FROM vitima
+WHERE vitima.genero = 'Feminino';
+
