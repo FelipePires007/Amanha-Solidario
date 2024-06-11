@@ -159,12 +159,14 @@ FROM doacao
 GROUP BY tipo;
 
 
+--Gil
 SELECT
   abrigo.nome AS Nome,
   abrigo.capacidade AS Capacidade
 FROM abrigo
 ORDER BY abrigo.capacidade;
 
+--Gil
 SELECT
   abrigo.nome AS Nome,
   (abrigo.capacidade - (SELECT SUM(vitima.idade) FROM vitima WHERE vitima.id_abrigo = abrigo.id_abrigo)) AS Vagas
@@ -172,28 +174,26 @@ FROM abrigo
 LEFT JOIN vitima ON vitima.id_abrigo = abrigo.id_abrigo
 GROUP BY abrigo.id_abrigo, abrigo.nome, abrigo.capacidade;
 
-SELECT genero, COUNT(id_vitima) AS quantidade_vitimas
-FROM vitima
-GROUP BY genero;
 
+
+
+-- Felipe
 SELECT
   voluntario.nome AS Nome,
   voluntario.idade AS Idade
 FROM voluntario
 ORDER BY voluntario.idade;
 
--- SELECT
---   voluntario.nome AS Nome,
---   SUM(voluntario.idade)
---   FROM voluntario
---   LEFT JOIN voluntario ON voluntario.id_voluntario = voluntario.id_voluntario;
 
+--Gabriel
 SELECT
   voluntario.nome AS Nome,
   voluntario.idade
   FROM voluntario
   LEFT JOIN voluntario ON voluntario.id_voluntario = voluntario.id_voluntario;
 
+
+--Gabriel
 SELECT 
   abrigo.nome AS Nome_Abrigo,
   COUNT(voluntario.id_voluntario) AS Quantidade_Voluntarios
@@ -202,10 +202,10 @@ LEFT JOIN ong ON abrigo.id_ong = ong.id_ong
 LEFT JOIN voluntario ON ong.id_ong = voluntario.id_ong
 GROUP BY abrigo.nome;
 
-SELECT 
-  voluntario.nome AS nome_voluntario, 
-  voluntario.idade AS idade_voluntario
-FROM voluntario;
+--Gabriel
+SELECT genero, COUNT(id_vitima) AS quantidade_vitimas
+FROM vitima
+GROUP BY genero;
 
 -- Andrey
 select nome, count(*) from ong GROUP BY nome;
