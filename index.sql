@@ -169,7 +169,7 @@ ORDER BY abrigo.capacidade;
 --Gil
 SELECT
   abrigo.nome AS Nome,
-  (abrigo.capacidade - (SELECT SUM(vitima.idade) FROM vitima WHERE vitima.id_abrigo = abrigo.id_abrigo)) AS Vagas
+   ( (SELECT SUM(vitima.idade) - abrigo.capacidade  FROM vitima WHERE vitima.id_abrigo = abrigo.id_abrigo)) AS Vagas
 FROM abrigo
 LEFT JOIN vitima ON vitima.id_abrigo = abrigo.id_abrigo
 GROUP BY abrigo.id_abrigo, abrigo.nome, abrigo.capacidade;
@@ -179,9 +179,9 @@ GROUP BY abrigo.id_abrigo, abrigo.nome, abrigo.capacidade;
 --Gabriel
 SELECT
   voluntario.nome AS Nome,
-  voluntario.idade
-  FROM voluntario
-  LEFT JOIN voluntario ON voluntario.id_voluntario = voluntario.id_voluntario;
+  voluntario.idade AS Idade
+FROM voluntario;
+
 
 
 --Gabriel
