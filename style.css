@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    font-family: sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+}
+
+.header .menu, .header .notification {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.logo img {
+    width: 150px;
+}
+
+.message {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.message h1 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+}
+
+.footer-item {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.other-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+}
+
+.other-screen.active {
+    opacity: 1;
+}
+
+.other-screen .logo img {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.other-screen .title {
+    text-align: center;
+    font-weight: bold;
+}
+
+.other-screen .title h1 {
+    font-size: 48px;
+}
+
+.other-screen .title h2 {
+    font-size: 24px;
+}
