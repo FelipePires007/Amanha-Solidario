@@ -87,5 +87,7 @@ Ref: "voluntario"."id_ong" < "ong"."id_ong"
 Graficos:
 [https://1drv.ms/x/s!AoWfyR3EVJkA4gZemU_UZKax4VM2?e=uSoccr](https://1drv.ms/x/s!AoWfyR3EVJkA4gZemU_UZKax4VM2?e=uSoccr)
 
+Apresentação Linkedin: https://www.linkedin.com/posts/gil-maik-junior-ab92b6226_ol%C3%A1-rede-vim-apresentar-para-voc%C3%AAs-activity-7208578437416943616-zhwP?utm_source=share&utm_medium=member_desktop
+
 Slide:
   https://gamma.app/docs/Amanha-Solidario-25kmztuf4jl1wmp
